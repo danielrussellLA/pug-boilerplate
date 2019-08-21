@@ -1,0 +1,50 @@
+{
+  "name": "pug-boilerplate",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "yarn build && ./node_modules/.bin/concurrently \"yarn serve\" \"yarn watch\"",
+    "build": "rm -rf ./dist && node build.js",
+    "watch": "watch -p 'templates/**' -c 'yarn build'",
+    "serve": "node devServer.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/runtime-corejs3": "^7.5.5",
+    "@s1/omjs": "^2.5.0",
+    "body-parser": "^1.18.3",
+    "browserify": "^16.2.3",
+    "canvas-sketch": "^0.2.0",
+    "canvas-sketch-util": "^1.6.0",
+    "concurrently": "^4.1.2",
+    "core-js": "^3.1.4",
+    "express": "^4.16.4",
+    "http": "0.0.0",
+    "morgan": "^1.9.1",
+    "ncp": "^2.0.0",
+    "nice-color-palettes": "^2.0.0",
+    "pug": "^2.0.4",
+    "watch-cli": "^0.2.3",
+    "watchify": "^3.11.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-preset-es2015": "^6.24.1",
+    "babelify": "^8.0.0"
+  },
+  "browserify": {
+    "transform": [
+      [
+        "babelify",
+        {
+          "presets": [
+            "es2015"
+          ]
+        }
+      ]
+    ]
+  }
+}

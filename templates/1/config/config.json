@@ -1,0 +1,17 @@
+{
+    "title": "hello there",
+    "cards": [
+        {
+            "title": "one",
+            "body": "body text"
+        },
+        {
+            "title": "two",
+            "body": "body text"
+        },
+        {
+            "title": "three",
+            "body": "body text"
+        }
+    ]
+}
